@@ -13,7 +13,7 @@ contract Arraysort {
     /// @return sortedArray
     function bubblesort(uint256[10] calldata unsortedArray) external pure returns (uint256[10] memory sortedArray){
         sortedArray = unsortedArray;
-        uint256 n = unsortedArray.length;
+        uint256 n = unsortedArray.length-1;
         assembly {
             let p := add(sortedArray, 0x0)
             for { let i := 0 } lt(i, sub(n, 1)) { i := add(i, 1) } {
