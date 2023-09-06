@@ -3,14 +3,14 @@ pragma solidity ^0.8.21;
 
 /// Calling the pre-compiled contract modexp located at address 0x05
 /// https://www.evm.codes/precompiled?fork=shanghai
-contract A {
+contract ModexpCall {
 
     /// @dev Calculates the remainder of ((b^e) / m)
     /// @param _b - Base integer
     /// @param _e - Exponent
     /// @param _m - Modulo
     /// @return uint256 - remainder
-    function modexp(uint256 _b, uint256 _e, uint256 _m) external returns (uint256) {
+    function modexp_call(uint256 _b, uint256 _e, uint256 _m) external returns (uint256) {
         assembly {
             /// Set Free Memory Pointer
             let p := mload(0x40)

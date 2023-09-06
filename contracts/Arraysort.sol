@@ -6,7 +6,7 @@ pragma solidity ^0.8.21;
 /// note these are not production ready, more work is needed so they can work with dynamic array lengths and options for desc vs asc
 /// more info on sorting algorithms - https://www.programiz.com/dsa/bubble-sort
 /// example test array: [250, 36, 999, 845, 3, 49, 8710, 65, 1, 54]
-contract A {
+contract Arraysort {
 
     /// @dev Return an ordered array of integers in asc order using bubble sort algorithm
     /// @param unsortedArray - unsorted int array

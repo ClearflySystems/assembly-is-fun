@@ -6,7 +6,7 @@ pragma solidity ^0.8.21;
 /// https://www.evm.codes/precompiled?fork=shanghai
 /// In solidity you can just call ecrecover(h,_v,_r,_s) but this is a more gas efficient method using inline assembly/yul
 /// https://soliditydeveloper.com/ecrecover
-contract A {
+contract EcrecoverCall {
 
     /// @dev Return the Public address that signed the message/transaction
     /// @dev Params are obtained from the TX data or by splitting the TX signature
@@ -15,7 +15,7 @@ contract A {
     /// @param _r - Signature R.x
     /// @param _s - Signature proof for R.x
     /// @return uint256 - remainder
-    function ecrecover(bytes32 _h, uint8 _v, bytes32 _r, bytes32 _s) external view returns (address) {
+    function ecrecover_call(bytes32 _h, uint8 _v, bytes32 _r, bytes32 _s) external view returns (address) {
 
         /// Create Hash with prefix
         bytes32 hash = keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", _h));
