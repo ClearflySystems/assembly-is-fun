@@ -1,5 +1,7 @@
 # assembly-is-fun
-Using assembly in Smart Contracts - snippets for testing or gas optimization strategies
+Because Solildty is a higher level language, often we need to optimise the Gas execution costs by managing memory better than the compiler can.
+To do that we can use the lower level Assembly language which allows us to manage the memory stack more efficiently.
+An example when this is useful is during loops like sorting algorithms or when building params for internal EVM calls.
 
 Clone Project then run yarn install to install packages.
 `yarn install`
